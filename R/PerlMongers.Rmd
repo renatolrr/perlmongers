@@ -1,5 +1,5 @@
 ---
-title: "Perl Mongers"
+title: "Perl: Años de oro"
 author: "Renato L. Ramirez Rivero"
 date: "18 de abril de 2016"
 output: html_document
@@ -8,23 +8,66 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, echo=FALSE, message=FALSE,results='hide',warning=FALSE}
+VersionesPerl <- read.csv("~/Documentos/perlmongers/data/VersionesPerl.csv")
+ReleasePerl <- read.csv("~/Documentos/perlmongers/data/ReleasePerl.csv")
+books_clear <- read.csv("~/Documentos/perlmongers/data/books_clear.csv")
 ```
 
-## Including Plots
+## Perl
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Versiones 
+  
+Numero de versiones: 442  
+Fuente: [perlhist Perl 5 version 22.0 documentation](http://perldoc.perl.org/perlhist.html) 
+  
+```{r, echo=FALSE, message=FALSE,results='hide',warning=FALSE}
+library(ggplot2)
+ggplot()+geom_point(data=ReleasePerl,aes(x=Fecha,y=Vers))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Bibliografía
+  
+Numero de publicaciones: 579  
+Fuente: [allperlbooks Andrew Shitov](https://github.com/ash/allperlbooks)
+  
+```{r, echo=FALSE, message=FALSE,results='hide',warning=FALSE}
+library(ggplot2)
+ggplot()+geom_point(data=books_clear,aes(x=Fecha,y=Libros))
+```
+  
+## Comunidad
+
+Numero de comunidades: 254   
+Fuente: [Perl Mongers](http://www.pm.org/)
+  
+## Localización  
+   
+Fuente: [Perl Mongers](http://www.pm.org/) y [The Global Innovation Index] (https://www.globalinnovationindex.org/content/page/data-analysis/)  
+  
+<iframe width="100%" height="520" frameborder="0" src="https://renatolrr.cartodb.com/viz/16b9de62-0584-11e6-89b4-0e98b61680bf/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>  
+
+
+https://renatolrr.cartodb.com/viz/16b9de62-0584-11e6-89b4-0e98b61680bf/public_map  
+
+##Conclusión  
+
+
+  
+    
+
+    
+
+###Anexo   
+  
+Versiones  
+```{r, echo=FALSE, message=FALSE}
+summary(ReleasePerl)
+```
+  
+Libros  
+ 
+```{r, echo=FALSE, message=FALSE}
+summary(books_clear)
+```
+  
