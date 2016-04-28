@@ -1,5 +1,5 @@
 ---
-title: "Perl: Años de oro"
+title: "Perl: epoca dorada"
 author: "Renato L. Ramirez Rivero"
 date: "18 de abril de 2016"
 output: html_document
@@ -15,47 +15,59 @@ books_clear <- read.csv("~/Documentos/perlmongers/data/books_clear.csv")
 ```
 
 ## Perl
-
+  
+Cuando nos referimos a [Perl](https://es.wikipedia.org/wiki/Perl), casi todo el mundo lo define como un lenguaje de programación complicado y muy antiguo, [Larry Wall](https://es.wikipedia.org/wiki/Larry_Wall) comenzo a trabajar en los años 90 y apareció el 18 de diciembre de 1987, hace 28 años.  
+¿Cómo ha evolucionado con el tiempo? Esto es lo que pretendemos ver.
+  
 ## Versiones 
   
-Numero de versiones: 442  
-Fuente: [perlhist Perl 5 version 22.0 documentation](http://perldoc.perl.org/perlhist.html) 
+Se supone que un lenguaje de programación está vivo cuando van parareciendo nuevas versiones. Se ha procedido a analizar su evolución.
   
 ```{r, echo=FALSE, message=FALSE,results='hide',warning=FALSE}
 library(ggplot2)
 ggplot()+geom_point(data=ReleasePerl,aes(x=Fecha,y=Vers))
 ```
-
+  
+Numero de versiones: 442  
+Fuente: [perlhist Perl 5 version 22.0 documentation](http://perldoc.perl.org/perlhist.html) 
+  
 ## Bibliografía
   
-Numero de publicaciones: 579  
-Fuente: [allperlbooks Andrew Shitov](https://github.com/ash/allperlbooks)
+No está al alcance de mi trabajo analizar bibliométricamente las publicaciones sobre Perl, ni analizarlas según las leyes de [Price](https://es.wikipedia.org/wiki/Derek_John_de_Solla_Price), pero si me he planteado el numero de publicaciones por año.  
+  
   
 ```{r, echo=FALSE, message=FALSE,results='hide',warning=FALSE}
 library(ggplot2)
 ggplot()+geom_point(data=books_clear,aes(x=Fecha,y=Libros))
 ```
   
+Numero de publicaciones: 579  
+Fuente: [allperlbooks Andrew Shitov](https://github.com/ash/allperlbooks)
+
 ## Comunidad
 
 Numero de comunidades: 254   
 Fuente: [Perl Mongers](http://www.pm.org/)
   
-## Localización  
-   
-Fuente: [Perl Mongers](http://www.pm.org/) y [The Global Innovation Index] (https://www.globalinnovationindex.org/content/page/data-analysis/)  
+## Apuntes para un estudio geolocalizado 
+  
+¿Que más podríamos obtener?   
+A modo de ejemplo, se ha realizado una gráfica teniendo en cuenta la localización de los perl Mongers y del índice de innovación a nivel mundial. 
+Es solo un pequeño ejemplo de lo que los datos nos pueden narrar.
   
 <iframe width="100%" height="520" frameborder="0" src="https://renatolrr.cartodb.com/viz/16b9de62-0584-11e6-89b4-0e98b61680bf/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>  
+  
+Fuente: [Perl Mongers](http://www.pm.org/) y [The Global Innovation Index] (https://www.globalinnovationindex.org/content/page/data-analysis/)  
+  
 
 
-https://renatolrr.cartodb.com/viz/16b9de62-0584-11e6-89b4-0e98b61680bf/public_map  
 
 ##Conclusión  
 
 
-  
+  El 26 de octubre de 1995, se creó el Comprehensive Perl Archive Network (CPAN).
     
-
+  Analisis de las citaciones.  
     
 
 ###Anexo   
