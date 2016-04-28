@@ -47,6 +47,8 @@ Fuente: [allperlbooks Andrew Shitov](https://github.com/ash/allperlbooks)
 ## Comunidad
   
 [Perl Mongers](https://en.wikipedia.org/wiki/Perl_Mongers) son los grupos de usuarios de Perl, es parte [The Perl Fundation](http://www.perlfoundation.org/) y forman la comunidad.
+  
+Tras distintos intentos de obtener la fecha de creación de los dominios, no ha sido posible obtener datos.  
 
 Numero de comunidades: 254   
 Fuente: [Perl Mongers](http://www.pm.org/)
