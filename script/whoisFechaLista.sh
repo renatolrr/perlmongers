@@ -1,4 +1,4 @@
-for line in $(cat file.txt)
+for line in $(cat perl_mongers_web.txt)
 	do 
 		# Whois 
 		echo $line
