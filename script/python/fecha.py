@@ -1,4 +1,4 @@
 import whois
-w = whois.whois('austin.pm')
-w.expiration_date 
+w = whois.whois('http://austin.pm/')
+w.creation_date 
 print w

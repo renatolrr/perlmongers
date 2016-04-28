@@ -16,8 +16,8 @@ sed 's/^ *//' |\
 grep -v  -e "http://" -e "WHOIS" > wtmp1.txt
 
 # Display all of the date lines and email addresses
-grep -Eio '([[:alnum:]_.]+@[[:alnum:]_]+ ?\.[[:alpha:].]{2,6})' wtmp1.txt
-egrep -i "ate: " wtmp1.txt 
+#grep -Eio '([[:alnum:]_.]+@[[:alnum:]_]+ ?\.[[:alpha:].]{2,6})' wtmp1.txt
+egrep -i "created: " wtmp1.txt 
 
 # Remove the tmp file
 rm -rf wtmp1.txt
